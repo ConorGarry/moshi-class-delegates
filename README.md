@@ -5,7 +5,7 @@ Based on this article [Simpler Kotlin class hierarchies using class delegation](
 when designing API parsers on our client using Kotlin's interface delegation. However, after some experimenting, and verified by one of the repsonses to the artice, it's not entirely fit for purpose.
 Serialising works without issues, but derserialising doesn't; because there's no way to know how to unflatten the class structure back to together in the correct hierarchy.
 
-This experimentation with a custom adapter can check if a class _does_ have a delegage by using Kotin reflection:
+This experimentation with a custom adapter can check if a class _does_ have a delegate by using Kotin reflection:
 
 ```kotlin
 inline fun <reified T : Any, DELEGATE : Any> findDelegatingPropertyClass(
